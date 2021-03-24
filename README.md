@@ -1,0 +1,1 @@
+# bmi-kata-ranking
