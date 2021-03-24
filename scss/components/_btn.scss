@@ -1,0 +1,64 @@
+.o-btn {
+    box-sizing: border-box;
+    min-width: 120px;
+    padding: 9px 20px;
+    text-align: center;
+    border-radius: 30px;
+
+    &.is-active {
+        color: #387c57;
+        background-color: #ade653;
+    }
+
+    &__ico {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+    }
+
+    &__txt {
+    }
+
+    &--dkgn {
+        color: #fff;
+        background-color: #387c57;
+        border-color: #387c57;
+    }
+
+    &--dkgn#{&}--outline {
+        color: #387c57;
+        border-color: #387c57;
+    }
+
+    &--outline {
+        color: #fff;
+        background-color: transparent;
+        border-color: #fff;
+    }
+
+    &--wh {
+        color: #1d1d1d;
+        background-color: #fff;
+        border: 1px solid #e2e2e2;
+        transition: 0.3s;
+
+        &:hover {
+            color: #387c57;
+            border-color: #75fa4c;
+        }
+    }
+}
+
+.l-actions {
+    display: flex;
+    align-items: center;
+    margin: 0 -6px;
+
+    &__item {
+        margin: 0 6px;
+    }
+
+    &__txt {
+        margin: 0 12px;
+    }
+}

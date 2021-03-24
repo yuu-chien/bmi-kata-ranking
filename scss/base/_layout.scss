@@ -1,0 +1,14 @@
+body {
+    background-color: #f2f2f2;
+}
+
+.l-wrap {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 72px 50px;
+
+    &__cnt {
+        margin: auto;
+        max-width: 1180px;
+    }
+}

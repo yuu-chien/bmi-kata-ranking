@@ -1,0 +1,67 @@
+.o-inpbox {
+    &__lbl {
+        display: block;
+        padding-left: 12px;
+        font-size: 14px;
+        color: #979797;
+        margin-bottom: 4px;
+    }
+
+    &__inp {
+        box-sizing: border-box;
+        min-width: 428px;
+        width: auto;
+        height: 44px;
+        padding: 11px 16px;
+        color: #555;
+        border: 1px solid #555555;
+        border-radius: 22px;
+
+        &--gy {
+            border-color: #e2e2e2;
+        }
+    }
+
+    &--ico {
+        position: relative;
+    }
+    &--ico & {
+        &__ico {
+            position: absolute;
+            left: 16px;
+            top: 14px;
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+        &__inp {
+            padding-left: 40px;
+        }
+    }
+}
+
+.c-input {
+    & + & {
+        margin-left: 12px;
+    }
+
+    &__cnt {
+    }
+}
+
+.l-form {
+    display: flex;
+    align-items: flex-end;
+
+    &__cnt {
+        display: flex;
+        align-items: center;
+    }
+
+    &__cnt + &__action {
+        margin-left: 12px;
+    }
+
+    &__action {
+    }
+}

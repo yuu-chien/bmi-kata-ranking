@@ -1,0 +1,54 @@
+.o-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1d1d1d;
+
+    &--lg {
+        font-size: 36px;
+    }
+
+    &--sm {
+        font-size: 14px;
+    }
+
+    &--gy {
+        color: #979797;
+    }
+
+    &--dkgy {
+        color: #555;
+    }
+}
+
+.l-heading {
+    margin-bottom: 40px;
+
+    &--tie {
+        padding-left: 16px;
+        margin: 12px 0;
+    }
+
+    &--center {
+        text-align: center;
+    }
+}
+
+.l-stack {
+    &__top {
+    }
+
+    &__cnt {
+        margin-top: 4px;
+    }
+}
+
+.l-stackWrap {
+    display: flex;
+    margin-top: 16px;
+
+    &__item {
+        & + & {
+            margin-left: 72px;
+        }
+    }
+}
