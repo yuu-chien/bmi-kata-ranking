@@ -16,24 +16,28 @@
         display: inline-block;
     }
 
-    &__txt {
+    &__txt {}
+
+    &--lyme {
+        color: #387C57;
+        background-color: #01FF00;
     }
 
     &--dkgn {
         color: #fff;
         background-color: #387c57;
-        border-color: #387c57;
+        border: 1px solid #387c57;
     }
 
     &--dkgn#{&}--outline {
         color: #387c57;
-        border-color: #387c57;
+        border: 1px solid #387c57;
     }
 
     &--outline {
         color: #fff;
         background-color: transparent;
-        border-color: #fff;
+        border: 1px solid #fff;
     }
 
     &--wh {

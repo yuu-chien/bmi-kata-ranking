@@ -1,0 +1,21 @@
+.o-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &--lg {
+        width: 40px;
+        height: 40px;
+    }
+
+    &--more {
+        background-image: url(../../images/icons/arrow/arrow-down.svg);
+
+        &.is-active {
+            background-image: url(../../images/icons/arrow/arrow-up.svg);
+        }
+    }
+}

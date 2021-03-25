@@ -11,6 +11,10 @@
         padding: 16px 24px;
     }
 
+    &__info {
+        padding: 20px 24px 30px 24px;
+    }
+
     &__cnt {
         box-sizing: border-box;
         padding: 24px 24px 0 24px;
@@ -20,6 +24,18 @@
         padding: 16px 24px;
         border-top: 1px solid #e2e2e2;
         border-bottom: 1px solid #e2e2e2;
+
+        &--noUnderline {
+            border-bottom: none;
+        }
+    }
+
+    &__panel {
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
     }
 
     &__bottom {
@@ -36,6 +52,7 @@
         }
     }
 
+    // 搜尋樣式
     &--search {
         border-radius: 12px;
     }
@@ -46,6 +63,39 @@
             padding: 16px;
             justify-content: space-between;
             align-items: center;
+        }
+    }
+
+    // 有獎牌裝飾
+    &--medal {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -24px;
+            right: 0;
+            display: block;
+            width: 86px;
+            height: 100px;
+        }
+    }
+
+    &--medal#{&}--fri {
+        &::before {
+            background: url(../../images/icons/medal/medal-fir.svg) no-repeat;
+        }
+    }
+
+    &--medal#{&}--sec {
+        &::before {
+            background: url(../../images/icons/medal/medal-sec.svg) no-repeat;
+        }
+    }
+
+    &--medal#{&}--thr {
+        &::before {
+            background: url(../../images/icons/medal/medal-thr.svg) no-repeat;
         }
     }
 }

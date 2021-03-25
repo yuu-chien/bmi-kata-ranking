@@ -7,3 +7,39 @@
         }
     }
 }
+
+.l-billboard {
+    display: flex;
+
+    &__item {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 72px 48px 96px 60px;
+
+        &--lyme {
+            background-color: #ADE653;
+        }
+
+        &--gn {
+            background-color: #35BF79;
+        }
+
+        &:first-child {
+            margin-bottom: 70px;
+            border-top-right-radius: 32px;
+        }
+
+        &:last-child {
+            margin-top: 70px;
+            border-bottom-left-radius: 32px;
+        }
+    }
+}
+
+.l-billboardList {
+    &__item {
+        &+& {
+            margin-top: 48px;
+        }
+    }
+}

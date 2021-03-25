@@ -47,6 +47,14 @@
         margin: 0 6px;
     }
 
+    &__txt {
+        margin: 0 6px;
+
+        &--md {
+            font-size: 24px;
+        }
+    }
+
     &--center {
         justify-content: center;
     }

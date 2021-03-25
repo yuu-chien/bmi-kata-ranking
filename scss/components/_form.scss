@@ -14,17 +14,18 @@
         height: 44px;
         padding: 11px 16px;
         color: #555;
-        border: 1px solid #555555;
+        border: 1px solid #e2e2e2;
         border-radius: 22px;
 
-        &--gy {
-            border-color: #e2e2e2;
+        &:focus {
+            border-color: #555;
         }
     }
 
     &--ico {
         position: relative;
     }
+
     &--ico & {
         &__ico {
             position: absolute;
@@ -34,6 +35,7 @@
             width: 20px;
             height: 20px;
         }
+
         &__inp {
             padding-left: 40px;
         }
@@ -41,12 +43,11 @@
 }
 
 .c-input {
-    & + & {
+    &+& {
         margin-left: 12px;
     }
 
-    &__cnt {
-    }
+    &__cnt {}
 }
 
 .l-form {
@@ -58,10 +59,9 @@
         align-items: center;
     }
 
-    &__cnt + &__action {
+    &__cnt+&__action {
         margin-left: 12px;
     }
 
-    &__action {
-    }
+    &__action {}
 }
