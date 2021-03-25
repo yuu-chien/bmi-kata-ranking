@@ -1,73 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
-        <link
-            rel="stylesheet"
-            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="./css/main.min.css" />
-        <title>BMI KATA RANKING Components</title>
-    </head>
 
-    <body>
-        <!-- 按鈕 btn -->
-        <h2 class="o-title o-title--lg">按鈕 btn</h2>
-        <section style="display: flex; align-items: center">
-            <a href="#" class="o-btn o-btn--wh">
-                <span class="o-btn__txt">基本按鈕</span>
-            </a>
-            <a href="#" class="o-btn o-btn--wh">
-                <i class="fas fa-star o-btn__ico"></i>
-                <span class="o-btn__txt">有ICON按鈕</span>
-            </a>
-            <a href="#" class="o-btn is-active">
-                <i class="fas fa-star o-btn__ico"></i>
-                <span class="o-btn__txt">有ICON按鈕</span>
-            </a>
-            <a href="#" class="o-btn o-btn--dkgn">
-                <span class="o-btn__txt">深綠色底按鈕</span>
-            </a>
-            <a href="#" class="o-btn o-btn--outline">
-                <span class="o-btn__txt">白色外框線按鈕</span>
-            </a>
-            <a href="#" class="o-btn o-btn--dkgn o-btn--outline">
-                <span class="o-btn__txt">深綠色外框線按鈕</span>
-            </a>
-        </section>
-        <!-- 徽章 badge -->
-        <h2 class="o-title o-title--lg">徽章 badge</h2>
-        <section style="display: flex; align-items: center">
-            <div class="o-badge">Under 10 mins</div>
-            <div class="o-badge o-badge--og">No. 3</div>
-            <div class="o-badge o-badge--gn">TEAM 1</div>
-            <div class="o-badge o-badge--outline">Video</div>
-            <div class="o-badge o-badge--md o-badge--outline">低於10分鐘</div>
-        </section>
-        <!-- 輸入框 input -->
-        <h2 class="o-title o-title--lg">輸入框 input</h2>
-        <section>
-            <div class="o-inpbox">
-                <label for="" class="o-inpbox__lbl">文字文字文字</label>
-                <input type="number" id="" class="o-inpbox__inp" placeholder="" />
-            </div>
-            <div class="c-input">
-                <div class="c-input__tit">
-                    <label for="" class="o-inpbox__lbl"></label>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>BMI KATA RANKING Components</title>
+</head>
+
+<body>
+    <div class="l-wrap">
+        <div class="c-card__cnt">
+            <!-- 按鈕 btn -->
+            <h2 class="o-title o-title--lg">按鈕 btn</h2>
+            <section style="display: flex; align-items: center">
+                <a href="#" class="o-btn o-btn--wh">
+                    <span class="o-btn__txt">基本按鈕</span>
+                </a>
+                <a href="#" class="o-btn o-btn--wh">
+                    <i class="fas fa-star o-btn__ico"></i>
+                    <span class="o-btn__txt">有ICON按鈕</span>
+                </a>
+                <a href="#" class="o-btn is-active">
+                    <i class="fas fa-star o-btn__ico"></i>
+                    <span class="o-btn__txt">有ICON按鈕</span>
+                </a>
+                <a href="#" class="o-btn o-btn--dkgn">
+                    <span class="o-btn__txt">深綠色底按鈕</span>
+                </a>
+                <a href="#" class="o-btn o-btn--outline">
+                    <span class="o-btn__txt">白色外框線按鈕</span>
+                </a>
+                <a href="#" class="o-btn o-btn--dkgn o-btn--outline">
+                    <span class="o-btn__txt">深綠色外框線按鈕</span>
+                </a>
+            </section>
+            <!-- 徽章 badge -->
+            <h2 class="o-title o-title--lg">徽章 badge</h2>
+            <section style="display: flex; align-items: center">
+                <div class="o-badge">Under 10 mins</div>
+                <div class="o-badge o-badge--og">No. 3</div>
+                <div class="o-badge o-badge--gn">TEAM 1</div>
+                <div class="o-badge o-badge--outline">Video</div>
+                <div class="o-badge o-badge--md o-badge--outline">低於10分鐘</div>
+            </section>
+            <!-- 輸入框 input -->
+            <h2 class="o-title o-title--lg">輸入框 input</h2>
+            <section>
+                <div class="o-inpbox">
+                    <label for="" class="o-inpbox__lbl">文字文字文字</label>
+                    <input type="number" id="" class="o-inpbox__inp" placeholder="" />
                 </div>
-                <div class="c-input__cnt">
-                    <div class="o-inpbox o-inpbox--ico">
-                        <i class="fas fa-search o-inpbox__ico"></i>
-                        <input type="text" id="" class="o-inpbox__inp o-inpbox__inp--gy" placeholder="搜尋參賽者" />
+                <div class="c-input">
+                    <div class="c-input__tit">
+                        <label for="" class="o-inpbox__lbl"></label>
+                    </div>
+                    <div class="c-input__cnt">
+                        <div class="o-inpbox o-inpbox--ico">
+                            <i class="fas fa-search o-inpbox__ico"></i>
+                            <input type="text" id="" class="o-inpbox__inp o-inpbox__inp--gy" placeholder="搜尋參賽者" />
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </body>
+            </section>
+            <!-- 卡片 cards -->
+            <h2 class="o-title o-title--lg">卡片 cards</h2>
+            <section>
+                <div class="c-card c-card--medal c-card--fri">
+                    <div class="c-card__tit">
+                        <p class="o-title">第五組</p>
+                        <div class="l-stackWrap">
+                            <div class="l-stackWrap__item">
+                                <div class="l-stack">
+                                    <div class="l-stack__top">
+                                        <p class="o-title o-title--sm o-title--normal o-title--gy">繳交人數</p>
+                                    </div>
+                                    <div class="l-stack__cnt">
+                                        <p class="o-txt">8人</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-stackWrap__item">
+                                <div class="l-stack">
+                                    <div class="l-stack__top">
+                                        <p class="o-title o-title--sm o-title--normal o-title--gy">平均時間</p>
+                                    </div>
+                                    <div class="l-stack__cnt">
+                                        <p class="o-txt">10分32秒</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card__main">
+                        <div class="l-stack">
+                            <div class="l-stack__top">
+                                <p class="o-title o-title--sm o-title--normal o-title--gy">組內排名</p>
+                            </div>
+                            <div class="l-stack__cnt">
+                                <ul class="l-memberList">
+                                    <li class="l-memberList__item">
+                                        <div class="c-memberClip">
+                                            <div class="c-memberClip__title">Lina Chen</div>
+                                            <div class="c-memberClip__timer">8分20秒</div>
+                                        </div>
+                                    </li>
+                                    <li class="l-memberList__item">
+                                        <div class="c-memberClip">
+                                            <div class="c-memberClip__title">Yu Chien</div>
+                                            <div class="c-memberClip__timer">9分20秒</div>
+                                        </div>
+                                    </li>
+                                    <li class="l-memberList__item">
+                                        <div class="c-memberClip">
+                                            <div class="c-memberClip__title">Jordan Tseng</div>
+                                            <div class="c-memberClip__timer">9分36秒</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card__bottom c-card__bottom--r">
+                        <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
+                    </div>
+                </div>
+            </section>
+            <!-- 其他 -->
+            <h2 class="o-title o-title--lg">其他</h2>
+            <section>
+                <div class="c-memberClip">
+                    <div class="c-memberClip__title">Lorem, ipsum dolor.</div>
+                    <div class="c-memberClip__timer">99分59秒</div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
 </html>
