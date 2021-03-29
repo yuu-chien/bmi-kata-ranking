@@ -1,0 +1,5 @@
+@mixin breakpoint-pad() {
+    @media only screen and (max-width: 1044px) {
+        @content;
+    }
+}

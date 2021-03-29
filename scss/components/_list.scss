@@ -34,6 +34,12 @@
             border-bottom-left-radius: 32px;
         }
     }
+
+    @include breakpoint-pad {
+        &__item {
+            padding: 48px 36px;
+        }
+    }
 }
 
 .l-billboardList {

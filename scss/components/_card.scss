@@ -12,7 +12,7 @@
     }
 
     &__info {
-        padding: 20px 24px 30px 24px;
+        padding: 20px 24px;
     }
 
     &__cnt {
@@ -74,7 +74,7 @@
             content: '';
             position: absolute;
             top: -24px;
-            right: 0;
+            right: -28px;
             display: block;
             width: 86px;
             height: 100px;
