@@ -11,7 +11,8 @@
         font-size: 48px;
     }
 
-    &--md {
+    &--md,
+    &--main {
         font-size: 24px;
     }
 
@@ -35,8 +36,26 @@
         color: #387C57;
     }
 
+    &--wh {
+        color: #fff;
+    }
+
     &--long {
         width: 264px;
+    }
+
+    @include breakpoint-pad {
+        &--md {
+            font-size: 16px;
+        }
+
+        &--lg {
+            font-size: 24px;
+        }
+
+        &--long {
+            width: auto;
+        }
     }
 }
 

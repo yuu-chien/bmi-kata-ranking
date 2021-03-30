@@ -2,6 +2,18 @@
     margin-top: 24px;
 }
 
+.u-gapT-min {
+    @include breakpoint-pad {
+        &-m {
+            margin-top: 4px;
+        }
+    }
+}
+
 .u-paraL-sm {
     margin-left: 20px;
+}
+
+.u-paraL-xs {
+    margin-left: 12px;
 }

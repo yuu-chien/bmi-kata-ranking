@@ -1,0 +1,15 @@
+.u-hidden {
+    @include breakpoint-pad {
+        &-m {
+            display: none;
+        }
+    }
+}
+
+.u-show {
+    @include breakpoint-pad {
+        &-m {
+            display: block;
+        }
+    }
+}

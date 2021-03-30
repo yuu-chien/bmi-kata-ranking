@@ -59,6 +59,10 @@
         color: #387C57;
         background-color: #ADE653;
     }
+
+    @include breakpoint-pad {
+        padding: 12px;
+    }
 }
 
 .l-rankClip {

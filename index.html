@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>BMI KATA RANKING</title>
 </head>
@@ -16,22 +15,26 @@
     <!-- header -->
     <header class="l-header">
         <div class="l-header__cnt">
-            <h2 class="o-title o-title--md o-title--dkgn">BMI KATA</h2>
-            <div class="l-actions">
-                <div class="l-actions__item">
-                    <a href="#" class="o-btn o-btn--wh">
-                        <span class="o-btn__txt">計算BMI</span>
-                    </a>
-                </div>
-                <div class="l-actions__item">
-                    <a href="#" class="o-btn o-btn--wh">
-                        <span class="o-btn__txt">查看最新排行</span>
-                    </a>
-                </div>
-                <div class="l-actions__item">
-                    <a href="#" class="o-btn o-btn--lyme">
-                        <span class="o-btn__txt">登入，可以隨時查看！</span>
-                    </a>
+            <div class="l-header__tit">
+                <h2 class="o-title o-title--main o-title--dkgn">BMI KATA</h2>
+            </div>
+            <div class="l-header__btn">
+                <div class="l-actions">
+                    <div class="l-actions__item">
+                        <a href="#" class="o-btn o-btn--wh">
+                            <span class="o-btn__txt">計算BMI</span>
+                        </a>
+                    </div>
+                    <div class="l-actions__item">
+                        <a href="#" class="o-btn o-btn--wh">
+                            <span class="o-btn__txt">查看最新排行</span>
+                        </a>
+                    </div>
+                    <div class="l-actions__item">
+                        <a href="#" class="o-btn o-btn--lyme">
+                            <span class="o-btn__txt">登入，可以隨時查看！</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,11 +43,15 @@
     <section class="l-container">
         <div class="l-kv">
             <div class="l-kv__tit">
-                <h2 class="o-title o-title--md o-title--dkgn">2021 春季</h2>
+                <h2 class="o-title o-title--md o-title--dkgn">2021 春季 ’</h2>
                 <h1 class="o-title o-title--xl o-title--dkgn">六角學院<br>程式武道大賽</h1>
             </div>
             <div class="l-kv__img">
-                <img src="./images/kv.svg" alt="六角學院程式武道大賽">
+                <picture>
+                    <source srcset="./images/kv__2x.svg" media="(-webkit-min-device-pixel-ratio: 1.3),(min-resolution: 1.3dppx)">
+                    <source srcset="./images/kv__3x.svg" media="(-webkit-min-device-pixel-ratio: 1.2),(min-resolution: 1.2dppx)">
+                    <img src="./images/kv.svg" alt="六角學院程式武道大賽">
+                </picture>
             </div>
         </div>
     </section>
@@ -54,12 +61,13 @@
             <li class="l-rankClip__item">
                 <div class="c-rankClip">
                     <div class="c-rankClip__cnt">
-                        <div class="l-badges">
-                            <div class="l-badges__txt l-badges__txt--md">排行前名</div>
-                            <div class="l-badges__item">
-                                <div class="o-badge o-badge--outline">100</div>
+                        <div class="l-badges l-badges--permute">
+                            <div class="l-badges__txt l-badges__txt--md">排行前</div>
+                            <div class="l-badges__item u-gapT-min-m">
+                                <div class="o-badge o-badge--outline o-badge--record">100</div>
+                                <span class="o-title o-title--md o-title--wh o-title--normal">名抽 switch</span>
                             </div>
-                            <div class="l-badges__txt l-badges__txt--md">抽 switch</div>
+                            <!-- <div class="l-badges__txt l-badges__txt--md"></div> -->
                         </div>
                     </div>
                     <div class="c-rankClip__action">
@@ -72,12 +80,13 @@
             <li class="l-rankClip__item">
                 <div class="c-rankClip c-rankClip--lyme">
                     <div class="c-rankClip__cnt">
-                        <div class="l-badges">
+                        <div class="l-badges l-badges--permute">
                             <div class="l-badges__txt l-badges__txt--md">目前已有</div>
-                            <div class="l-badges__item">
-                                <div class="o-badge o-badge--outline">299</div>
+                            <div class="l-badges__item u-gapT-min-m">
+                                <div class="o-badge o-badge--outline o-badge--record">299</div>
+                                <span class="o-title o-title--md o-title--dkgn o-title--normal">名參賽者！</span>
                             </div>
-                            <div class="l-badges__txt l-badges__txt--md">名參賽者！</div>
+                            <!-- <div class="l-badges__txt l-badges__txt--md">名參賽者！</div> -->
                         </div>
                     </div>
                     <div class="c-rankClip__action">
@@ -101,7 +110,7 @@
                     </div>
                 </div>
                 <div class="c-card__cnt">
-                    <div class="l-form">
+                    <div class="l-form l-form--permute">
                         <div class="l-form__cnt">
                             <div class="c-input">
                                 <div class="c-input__cnt">
@@ -560,27 +569,29 @@
                             <div class="o-txt o-txt--sm o-txt--gy">篩選條件：</div>
                         </div>
                         <div class="l-actions__item">
-                            <a href="#" class="o-btn o-btn--wh">
+                            <a href="#" class="o-btn o-btn--md o-btn--wh">
                                 <span class="o-btn__txt">低於10分鐘</span>
                             </a>
                         </div>
                         <div class="l-actions__item">
-                            <a href="#" class="o-btn o-btn--wh">
+                            <a href="#" class="o-btn o-btn--md o-btn--wh">
                                 <span class="o-btn__txt">有留言</span>
                             </a>
                         </div>
                         <div class="l-actions__item">
-                            <a href="#" class="o-btn o-btn--wh">
+                            <a href="#" class="o-btn o-btn--md o-btn--wh">
                                 <span class="o-btn__txt">有影片</span>
                             </a>
                         </div>
                     </div>
                     <div class="l-form">
-                        <div class="l-form__cnt">
+                        <div class="l-form__cnt u-hidden-m">
                             <div class="c-input">
                                 <div class="c-input__cnt">
                                     <div class="o-inpbox o-inpbox--ico">
-                                        <i class="fas fa-search o-inpbox__ico"></i>
+                                        <div class="o-inpbox__ico">
+                                            <i class="o-icon o-icon--magnifier"></i>
+                                        </div>
                                         <input type="text" id="" class="o-inpbox__inp o-inpbox__inp--gy" placeholder="搜尋參賽者" />
                                     </div>
                                 </div>

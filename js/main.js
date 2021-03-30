@@ -1,3 +1,4 @@
+
 const teamAmountListBox = document.querySelector("#l-billboardList-amount");
 const teamSpeedListBox = document.querySelector("#l-billboardList-speed");
 const personTop3List = document.querySelector("#personTop3");
