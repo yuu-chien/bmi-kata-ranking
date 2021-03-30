@@ -1,5 +1,6 @@
 .o-inpbox {
-    width: 428px;
+    width: auto;
+    max-width: 428px;
 
     &__lbl {
         display: block;

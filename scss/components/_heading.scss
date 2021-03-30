@@ -55,6 +55,8 @@
 
         &--long {
             width: auto;
+            // 暫時先這樣處理，直接在 o 上面寫間距不太好><
+            margin-right: 12px;
         }
     }
 }
