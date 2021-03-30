@@ -17,5 +17,6 @@
 ## Scheduling
 * 2021.03.27 設計稿更新 Pad 與 Phone 版本
 * 2021.03.29 切版更新 Pad 版本，並對 HTML 結構進行微調；Phone 版本待切版。
+* 2021.03.30 解決 PR 衝突。
 
 <img alt="screen shot" src="https://i.imgur.com/2REGZaM.png" />
