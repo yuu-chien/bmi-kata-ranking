@@ -174,7 +174,7 @@
                         <h2 class="o-title o-title--lg o-title--dkgn">最踴躍組別</h2>
                     </div>
                 </div>
-                <ul class="l-billboardList">
+                <ul id="l-billboardList-amount" class="l-billboardList">
                     <li class="l-billboardList__item">
                         <div class="c-card c-card--medal c-card--fri">
                             <div class="c-card__tit">
@@ -366,7 +366,7 @@
                         <h2 class="o-title o-title--lg o-title--dkgy">最神速組別</h2>
                     </div>
                 </div>
-                <ul class="l-billboardList">
+                <ul id="l-billboardList-speed" class="l-billboardList ">
                     <li class="l-billboardList__item">
                         <div class="c-card c-card--medal c-card--fri">
                             <div class="c-card__tit">
@@ -611,7 +611,7 @@
                 </div>
             </div>
             <!-- 前三名卡片 -->
-            <ul class="l-card">
+            <ul id='personTop3' class="l-card">
                 <li class="l-card__item">
                     <div class="c-card">
                         <div class="c-card__tags">
@@ -663,11 +663,11 @@
             </ul>
             <div class="l-heading l-heading--tie">
                 <div class="l-heading__cnt">
-                    <p class="o-txt o-txt--gy">No.11 ~ No.20</p>
+                    <!-- <p class="o-txt o-txt--gy">No.11 ~ No.20</p> -->
                 </div>
             </div>
             <!-- 第四名之後的卡片 -->
-            <ul class="l-card">
+            <ul id='personOther' class="l-card">
                 <li class="l-card__item">
                     <div class="c-card">
                         <div class="c-card__info">
@@ -722,6 +722,7 @@
         <p class="o-txt o-txt--sm o-txt--gy">© JordanttcDesign All Rights Reserved.</p>
     </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="./js/main.js"></script>
 
 </html>

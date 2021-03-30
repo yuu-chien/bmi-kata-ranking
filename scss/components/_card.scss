@@ -1,4 +1,17 @@
 .c-card {
+  &__cnt {
+    box-sizing: border-box;
+    padding: 24px 24px 0 24px;
+  }
+
+  &__main {
+    padding: 16px 24px;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+
+    &--noUnderline {
+      border-bottom: none;
+
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0px 1px 2px #00000029;
@@ -19,52 +32,45 @@
         box-sizing: border-box;
         padding: 24px 24px 0 24px;
     }
+  }
 
-    &__main {
-        padding: 16px 24px;
-        border-top: 1px solid #e2e2e2;
-        border-bottom: 1px solid #e2e2e2;
+  &__panel {
+    display: none;
 
-        &--noUnderline {
-            border-bottom: none;
-        }
+    &.is-active {
+      display: block;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    padding: 16px 24px 24px 24px;
+    align-items: center;
+
+    &--apart {
+      justify-content: space-between;
     }
 
-    &__panel {
-        display: none;
+    &--r {
+      justify-content: flex-end;
+    }
+  }
 
-        &.is-active {
-            display: block;
-        }
+  // 搜尋樣式
+  &--search {
+    border-radius: 12px;
+  }
+
+  &--search & {
+    &__cnt {
+      display: flex;
+      padding: 16px;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    &__bottom {
-        display: flex;
-        padding: 16px 24px 24px 24px;
-        align-items: center;
+  }
 
-        &--apart {
-            justify-content: space-between;
-        }
-
-        &--r {
-            justify-content: flex-end;
-        }
-    }
-
-    // 搜尋樣式
-    &--search {
-        border-radius: 12px;
-    }
-
-    &--search & {
-        &__cnt {
-            display: flex;
-            padding: 16px;
-            justify-content: space-between;
-            align-items: center;
-        }
-    }
 
     // 有獎牌裝飾
     &--medal {
@@ -79,33 +85,35 @@
             width: 86px;
             height: 100px;
         }
-    }
 
-    &--medal#{&}--fri {
-        &::before {
-            background: url(../../images/icons/medal/medal-fir.svg) no-repeat;
-        }
     }
+  }
 
-    &--medal#{&}--sec {
-        &::before {
-            background: url(../../images/icons/medal/medal-sec.svg) no-repeat;
-        }
+  &--medal#{&}--1 {
+    &::before {
+      background: url(../../images/icons/medal/medal-fir.svg) no-repeat;
     }
+  }
 
-    &--medal#{&}--thr {
-        &::before {
-            background: url(../../images/icons/medal/medal-thr.svg) no-repeat;
-        }
+  &--medal#{&}--2 {
+    &::before {
+      background: url(../../images/icons/medal/medal-sec.svg) no-repeat;
     }
+  }
+
+  &--medal#{&}--3 {
+    &::before {
+      background: url(../../images/icons/medal/medal-thr.svg) no-repeat;
+    }
+  }
 }
 
 .l-card {
-    &__item {
-        margin-top: 12px;
+  &__item {
+    margin-top: 12px;
 
-        &:first-child {
-            margin-top: 0;
-        }
+    &:first-child {
+      margin-top: 0;
     }
+  }
 }
