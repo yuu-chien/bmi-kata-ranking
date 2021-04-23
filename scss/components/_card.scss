@@ -60,6 +60,7 @@
     &--search & {
         &__cnt {
             display: flex;
+            flex-wrap: wrap;
             padding: 16px;
             justify-content: space-between;
             align-items: center;
@@ -71,7 +72,7 @@
         position: relative;
 
         &::before {
-            content: '';
+            content: "";
             position: absolute;
             top: -24px;
             right: -28px;
@@ -96,6 +97,42 @@
     &--medal#{&}--3 {
         &::before {
             background: url(../../images/icons/medal/medal-thr.svg) no-repeat;
+        }
+    }
+
+    @include breakpoint-pad {
+        &__tags {
+            padding: 16px 16px 0 16px;
+        }
+
+        &__tit {
+            padding: 16px;
+        }
+
+        &__main {
+            padding: 16px;
+        }
+
+        &__cnt {
+            padding: 16px 16px 0 16px;
+        }
+
+        &__info {
+            padding: 16px;
+        }
+
+        &__bottom {
+            padding: 16px;
+
+            &--apart {
+                display: block;
+            }
+        }
+
+        &--search & {
+            &__cnt {
+                flex-wrap: wrap;
+            }
         }
     }
 }

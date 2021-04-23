@@ -1,704 +1,642 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/main.min.css" />
+        <title>BMI KATA RANKING</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/main.min.css" />
-    <title>BMI KATA RANKING</title>
-</head>
-
-<body>
-    <!-- header -->
-    <header class="l-header">
-        <div class="l-header__cnt">
-            <div class="l-header__tit">
-                <h2 class="o-title o-title--main o-title--dkgn">BMI KATA</h2>
-            </div>
-            <div class="l-header__btn">
-                <div class="l-actions">
-                    <div class="l-actions__item">
-                        <a href="#" class="o-btn o-btn--wh">
-                            <span class="o-btn__txt">計算BMI</span>
-                        </a>
-                    </div>
-                    <div class="l-actions__item">
-                        <a href="#" class="o-btn o-btn--wh">
-                            <span class="o-btn__txt">查看最新排行</span>
-                        </a>
-                    </div>
-                    <div class="l-actions__item">
-                        <a href="#" class="o-btn o-btn--lyme">
-                            <span class="o-btn__txt">登入，可以隨時查看！</span>
-                        </a>
-                    </div>
+    <body>
+        <!-- header -->
+        <header class="l-header">
+            <div class="l-header__cnt">
+                <div class="l-header__tit">
+                    <h2 class="o-title o-title--main o-title--dkgn">BMI KATA</h2>
                 </div>
-            </div>
-        </div>
-    </header>
-    <!-- Key view -->
-    <section class="l-container">
-        <div class="l-kv">
-            <div class="l-kv__tit">
-                <h2 class="o-title o-title--md o-title--dkgn">2021 春季 ’</h2>
-                <h1 class="o-title o-title--xl o-title--dkgn">六角學院<br>程式武道大賽</h1>
-            </div>
-            <div class="l-kv__img">
-                <picture>
-                    <source srcset="./images/kv__2x.svg" media="(-webkit-min-device-pixel-ratio: 1.3),(min-resolution: 1.3dppx)">
-                    <source srcset="./images/kv__3x.svg" media="(-webkit-min-device-pixel-ratio: 1.2),(min-resolution: 1.2dppx)">
-                    <img src="./images/kv.svg" alt="六角學院程式武道大賽">
-                </picture>
-            </div>
-        </div>
-    </section>
-    <!-- 當前戰況 -->
-    <section class="l-container">
-        <ul class="l-rankClip">
-            <li class="l-rankClip__item">
-                <div class="c-rankClip">
-                    <div class="c-rankClip__cnt">
-                        <div class="l-badges l-badges--permute">
-                            <div class="l-badges__txt l-badges__txt--md">排行前</div>
-                            <div class="l-badges__item u-gapT-min-m">
-                                <div class="o-badge o-badge--outline o-badge--record">100</div>
-                                <span class="o-title o-title--md o-title--wh o-title--normal">名抽 switch</span>
-                            </div>
-                            <!-- <div class="l-badges__txt l-badges__txt--md"></div> -->
-                        </div>
-                    </div>
-                    <div class="c-rankClip__action">
-                        <a href="#" class="o-btn o-btn--outline">
-                            <span class="o-btn__txt">立即前往登錄</span>
-                        </a>
-                    </div>
-                </div>
-            </li>
-            <li class="l-rankClip__item">
-                <div class="c-rankClip c-rankClip--lyme">
-                    <div class="c-rankClip__cnt">
-                        <div class="l-badges l-badges--permute">
-                            <div class="l-badges__txt l-badges__txt--md">目前已有</div>
-                            <div class="l-badges__item u-gapT-min-m">
-                                <div class="o-badge o-badge--outline o-badge--record">299</div>
-                                <span class="o-title o-title--md o-title--dkgn o-title--normal">名參賽者！</span>
-                            </div>
-                            <!-- <div class="l-badges__txt l-badges__txt--md">名參賽者！</div> -->
-                        </div>
-                    </div>
-                    <div class="c-rankClip__action">
-                        <a href="#" class="o-btn o-btn--dkgn o-btn--outline">
-                            <span class="o-btn__txt">查詢你的排行</span>
-                        </a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </section>
-    <!-- 計算你的 BMI -->
-    <section class="l-wrap l-wrap--gy">
-        <div class="l-wrap__cnt">
-            <div class="c-card">
-                <div class="c-card__tags">
-                    <div class="l-badges l-badges--center">
-                        <div class="l-badges__item">
-                            <div class="o-badge o-badge--lg o-badge--gn">計算你的 BMI</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="c-card__cnt">
-                    <div class="l-form l-form--permute">
-                        <div class="l-form__cnt">
-                            <div class="c-input">
-                                <div class="c-input__cnt">
-                                    <div class="o-inpbox">
-                                        <label for="" class="o-inpbox__lbl">請輸入您的身高</label>
-                                        <input type="number" id="" class="o-inpbox__inp" placeholder="身高" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-input">
-                                <div class="c-input__cnt">
-                                    <div class="o-inpbox">
-                                        <label for="" class="o-inpbox__lbl">請輸入您的體重</label>
-                                        <input type="number" id="" class="o-inpbox__inp" placeholder="體重" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="l-form__action">
-                            <div class="l-actions">
-                                <div class="l-actions__item">
-                                    <a href="#" class="o-btn o-btn--dkgn">
-                                        <span class="o-btn__txt">開始計算</span>
-                                    </a>
-                                </div>
-                                <div class="l-actions__item">
-                                    <a href="#" class="o-btn o-btn--wh">
-                                        <span class="o-btn__txt">清除全部</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="l-countInfo">
-                        <div class="c-countInfo">
-                            <div>不要害怕面對現實</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="c-card__bottom c-card__bottom--r">
+                <div class="l-header__btn">
                     <div class="l-actions">
-                        <div class="l-actions__txt">
-                            <div class="o-txt o-txt--sm o-txt--gy">想了解背後如何運作？</div>
+                        <div class="l-actions__item">
+                            <a href="#" class="o-btn o-btn--wh">
+                                <span class="o-btn__txt">計算BMI</span>
+                            </a>
                         </div>
                         <div class="l-actions__item">
                             <a href="#" class="o-btn o-btn--wh">
-                                <span class="o-btn__txt">查看程式碼</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- 最踴躍組別 / 最神速組別 -->
-    <section class="l-container l-container--gy">
-        <div class="l-billboard">
-            <div class="l-billboard__item l-billboard__item--lyme">
-                <div class="l-heading l-heading--center">
-                    <div class="l-heading__cnt">
-                        <h2 class="o-title o-title--lg o-title--dkgn">最踴躍組別</h2>
-                    </div>
-                </div>
-                <ul id="l-billboardList-amount" class="l-billboardList">
-                    <li class="l-billboardList__item">
-                        <div class="c-card c-card--medal c-card--fri">
-                            <div class="c-card__tit">
-                                <p class="o-title">第五組</p>
-                                <div class="l-stackWrap">
-                                    <div class="l-stackWrap__item">
-                                        <div class="l-stack">
-                                            <div class="l-stack__top">
-                                                <p class="o-title o-title--sm o-title--normal o-title--gy">繳交人數</p>
-                                            </div>
-                                            <div class="l-stack__cnt">
-                                                <p class="o-txt">8人</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="l-stackWrap__item">
-                                        <div class="l-stack">
-                                            <div class="l-stack__top">
-                                                <p class="o-title o-title--sm o-title--normal o-title--gy">平均時間</p>
-                                            </div>
-                                            <div class="l-stack__cnt">
-                                                <p class="o-txt">10分32秒</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-card__main">
-                                <div class="l-stack">
-                                    <div class="l-stack__top">
-                                        <p class="o-title o-title--sm o-title--normal o-title--gy">組內排名</p>
-                                    </div>
-                                    <div class="l-stack__cnt">
-                                        <ul class="l-memberList">
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Lina Chen</div>
-                                                    <div class="c-memberClip__timer">8分20秒</div>
-                                                </div>
-                                            </li>
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Yu Chien</div>
-                                                    <div class="c-memberClip__timer">9分20秒</div>
-                                                </div>
-                                            </li>
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Jordan Tseng</div>
-                                                    <div class="c-memberClip__timer">9分36秒</div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-card__bottom c-card__bottom--r">
-                                <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="l-billboardList__item">
-                        <div class="c-card c-card--medal c-card--sec">
-                            <div class="c-card__tit">
-                                <p class="o-title">第五組</p>
-                                <div class="l-stackWrap">
-                                    <div class="l-stackWrap__item">
-                                        <div class="l-stack">
-                                            <div class="l-stack__top">
-                                                <p class="o-title o-title--sm o-title--normal o-title--gy">繳交人數</p>
-                                            </div>
-                                            <div class="l-stack__cnt">
-                                                <p class="o-txt">8人</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="l-stackWrap__item">
-                                        <div class="l-stack">
-                                            <div class="l-stack__top">
-                                                <p class="o-title o-title--sm o-title--normal o-title--gy">平均時間</p>
-                                            </div>
-                                            <div class="l-stack__cnt">
-                                                <p class="o-txt">10分32秒</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-card__main">
-                                <div class="l-stack">
-                                    <div class="l-stack__top">
-                                        <p class="o-title o-title--sm o-title--normal o-title--gy">組內排名</p>
-                                    </div>
-                                    <div class="l-stack__cnt">
-                                        <ul class="l-memberList">
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Lina Chen</div>
-                                                    <div class="c-memberClip__timer">8分20秒</div>
-                                                </div>
-                                            </li>
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Yu Chien</div>
-                                                    <div class="c-memberClip__timer">9分20秒</div>
-                                                </div>
-                                            </li>
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Jordan Tseng</div>
-                                                    <div class="c-memberClip__timer">9分36秒</div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-card__bottom c-card__bottom--r">
-                                <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="l-billboardList__item">
-                        <div class="c-card c-card--medal c-card--thr">
-                            <div class="c-card__tit">
-                                <p class="o-title">第五組</p>
-                                <div class="l-stackWrap">
-                                    <div class="l-stackWrap__item">
-                                        <div class="l-stack">
-                                            <div class="l-stack__top">
-                                                <p class="o-title o-title--sm o-title--normal o-title--gy">繳交人數</p>
-                                            </div>
-                                            <div class="l-stack__cnt">
-                                                <p class="o-txt">8人</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="l-stackWrap__item">
-                                        <div class="l-stack">
-                                            <div class="l-stack__top">
-                                                <p class="o-title o-title--sm o-title--normal o-title--gy">平均時間</p>
-                                            </div>
-                                            <div class="l-stack__cnt">
-                                                <p class="o-txt">10分32秒</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-card__main">
-                                <div class="l-stack">
-                                    <div class="l-stack__top">
-                                        <p class="o-title o-title--sm o-title--normal o-title--gy">組內排名</p>
-                                    </div>
-                                    <div class="l-stack__cnt">
-                                        <ul class="l-memberList">
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Lina Chen</div>
-                                                    <div class="c-memberClip__timer">8分20秒</div>
-                                                </div>
-                                            </li>
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Yu Chien</div>
-                                                    <div class="c-memberClip__timer">9分20秒</div>
-                                                </div>
-                                            </li>
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Jordan Tseng</div>
-                                                    <div class="c-memberClip__timer">9分36秒</div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-card__bottom c-card__bottom--r">
-                                <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="l-billboard__item l-billboard__item--gn">
-                <div class="l-heading l-heading--center">
-                    <div class="l-heading__cnt">
-                        <h2 class="o-title o-title--lg o-title--dkgy">最神速組別</h2>
-                    </div>
-                </div>
-                <ul id="l-billboardList-speed" class="l-billboardList ">
-                    <li class="l-billboardList__item">
-                        <div class="c-card c-card--medal c-card--fri">
-                            <div class="c-card__tit">
-                                <p class="o-title">第五組</p>
-                                <div class="l-stackWrap">
-                                    <div class="l-stackWrap__item">
-                                        <div class="l-stack">
-                                            <div class="l-stack__top">
-                                                <p class="o-title o-title--sm o-title--normal o-title--gy">繳交人數</p>
-                                            </div>
-                                            <div class="l-stack__cnt">
-                                                <p class="o-txt">8人</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="l-stackWrap__item">
-                                        <div class="l-stack">
-                                            <div class="l-stack__top">
-                                                <p class="o-title o-title--sm o-title--normal o-title--gy">平均時間</p>
-                                            </div>
-                                            <div class="l-stack__cnt">
-                                                <p class="o-txt">10分32秒</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-card__main">
-                                <div class="l-stack">
-                                    <div class="l-stack__top">
-                                        <p class="o-title o-title--sm o-title--normal o-title--gy">組內排名</p>
-                                    </div>
-                                    <div class="l-stack__cnt">
-                                        <ul class="l-memberList">
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Lina Chen</div>
-                                                    <div class="c-memberClip__timer">8分20秒</div>
-                                                </div>
-                                            </li>
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Yu Chien</div>
-                                                    <div class="c-memberClip__timer">9分20秒</div>
-                                                </div>
-                                            </li>
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Jordan Tseng</div>
-                                                    <div class="c-memberClip__timer">9分36秒</div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-card__bottom c-card__bottom--r">
-                                <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="l-billboardList__item">
-                        <div class="c-card c-card--medal c-card--sec">
-                            <div class="c-card__tit">
-                                <p class="o-title">第五組</p>
-                                <div class="l-stackWrap">
-                                    <div class="l-stackWrap__item">
-                                        <div class="l-stack">
-                                            <div class="l-stack__top">
-                                                <p class="o-title o-title--sm o-title--normal o-title--gy">繳交人數</p>
-                                            </div>
-                                            <div class="l-stack__cnt">
-                                                <p class="o-txt">8人</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="l-stackWrap__item">
-                                        <div class="l-stack">
-                                            <div class="l-stack__top">
-                                                <p class="o-title o-title--sm o-title--normal o-title--gy">平均時間</p>
-                                            </div>
-                                            <div class="l-stack__cnt">
-                                                <p class="o-txt">10分32秒</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-card__main">
-                                <div class="l-stack">
-                                    <div class="l-stack__top">
-                                        <p class="o-title o-title--sm o-title--normal o-title--gy">組內排名</p>
-                                    </div>
-                                    <div class="l-stack__cnt">
-                                        <ul class="l-memberList">
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Lina Chen</div>
-                                                    <div class="c-memberClip__timer">8分20秒</div>
-                                                </div>
-                                            </li>
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Yu Chien</div>
-                                                    <div class="c-memberClip__timer">9分20秒</div>
-                                                </div>
-                                            </li>
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Jordan Tseng</div>
-                                                    <div class="c-memberClip__timer">9分36秒</div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-card__bottom c-card__bottom--r">
-                                <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="l-billboardList__item">
-                        <div class="c-card c-card--medal c-card--thr">
-                            <div class="c-card__tit">
-                                <p class="o-title">第五組</p>
-                                <div class="l-stackWrap">
-                                    <div class="l-stackWrap__item">
-                                        <div class="l-stack">
-                                            <div class="l-stack__top">
-                                                <p class="o-title o-title--sm o-title--normal o-title--gy">繳交人數</p>
-                                            </div>
-                                            <div class="l-stack__cnt">
-                                                <p class="o-txt">8人</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="l-stackWrap__item">
-                                        <div class="l-stack">
-                                            <div class="l-stack__top">
-                                                <p class="o-title o-title--sm o-title--normal o-title--gy">平均時間</p>
-                                            </div>
-                                            <div class="l-stack__cnt">
-                                                <p class="o-txt">10分32秒</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-card__main">
-                                <div class="l-stack">
-                                    <div class="l-stack__top">
-                                        <p class="o-title o-title--sm o-title--normal o-title--gy">組內排名</p>
-                                    </div>
-                                    <div class="l-stack__cnt">
-                                        <ul class="l-memberList">
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Lina Chen</div>
-                                                    <div class="c-memberClip__timer">8分20秒</div>
-                                                </div>
-                                            </li>
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Yu Chien</div>
-                                                    <div class="c-memberClip__timer">9分20秒</div>
-                                                </div>
-                                            </li>
-                                            <li class="l-memberList__item">
-                                                <div class="c-memberClip">
-                                                    <div class="c-memberClip__title">Jordan Tseng</div>
-                                                    <div class="c-memberClip__timer">9分36秒</div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-card__bottom c-card__bottom--r">
-                                <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!-- 個人排行 -->
-    <section class="l-wrap l-wrap--gy">
-        <div class="l-wrap__cnt">
-            <div class="l-heading l-heading--center">
-                <div class="l-heading__cnt">
-                    <h2 class="o-title o-title--lg o-title--dkgy">個人排行</h2>
-                </div>
-            </div>
-            <div class="c-card c-card--search">
-                <div class="c-card__cnt">
-                    <div class="l-actions">
-                        <div class="l-actions__txt">
-                            <div class="o-txt o-txt--sm o-txt--gy">篩選條件：</div>
-                        </div>
-                        <div class="l-actions__item">
-                            <a href="#" class="o-btn o-btn--md o-btn--wh">
-                                <span class="o-btn__txt">低於10分鐘</span>
+                                <span class="o-btn__txt">查看最新排行</span>
                             </a>
                         </div>
                         <div class="l-actions__item">
-                            <a href="#" class="o-btn o-btn--md o-btn--wh">
-                                <span class="o-btn__txt">有留言</span>
-                            </a>
-                        </div>
-                        <div class="l-actions__item">
-                            <a href="#" class="o-btn o-btn--md o-btn--wh">
-                                <span class="o-btn__txt">有影片</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="l-form">
-                        <div class="l-form__cnt u-hidden-m">
-                            <div class="c-input">
-                                <div class="c-input__cnt">
-                                    <div class="o-inpbox o-inpbox--ico">
-                                        <div class="o-inpbox__ico">
-                                            <i class="o-icon o-icon--magnifier"></i>
-                                        </div>
-                                        <input type="text" id="" class="o-inpbox__inp o-inpbox__inp--gy" placeholder="搜尋參賽者" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="l-form__action">
-                            <a href="#" class="o-btn o-btn--dkgn">
-                                <span class="o-btn__txt">搜尋</span>
+                            <a href="#" class="o-btn o-btn--lyme">
+                                <span class="o-btn__txt">登入，可以隨時查看！</span>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="l-heading l-heading--tie u-gapT-md">
-                <div class="l-heading__cnt">
-                    <p class="o-txt o-txt--gy">No.1 ~ No.10</p>
+        </header>
+        <!-- Key view -->
+        <section class="l-container">
+            <div class="l-kv">
+                <div class="l-kv__tit">
+                    <h2 class="o-title o-title--md o-title--dkgn">2021 春季 ’</h2>
+                    <h1 class="o-title o-title--xl o-title--dkgn">六角學院<br />程式武道大賽</h1>
+                </div>
+                <div class="l-kv__img">
+                    <picture>
+                        <source srcset="./images/kv__2x.svg" media="(min-width:1043px)" />
+                        <source srcset="./images/kv__3x.svg" media="(min-width:375px)" />
+                        <img src="./images/kv.svg" alt="六角學院程式武道大賽" />
+                    </picture>
                 </div>
             </div>
-            <!-- 前三名卡片 -->
-            <ul id='personTop3' class="l-card">
-                <li class="l-card__item">
-                    <div class="c-card">
-                        <div class="c-card__tags">
-                            <ul class="l-badges">
-                                <li class="l-badges__item">
-                                    <div class="o-badge o-badge--og">No. 1</div>
-                                </li>
-                                <li class="l-badges__item">
-                                    <div class="o-badge o-badge--gn">TEAM 1</div>
-                                </li>
-                                <li class="l-badges__item">
-                                    <div class="o-badge">Under 10 mins</div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="c-card__tit">
-                            <div class="l-stack">
-                                <div class="l-stack__top">
-                                    <p class="o-title">咖咖</p>
+        </section>
+        <!-- 當前戰況 -->
+        <section class="l-container">
+            <ul class="l-rankClip">
+                <li class="l-rankClip__item">
+                    <div class="c-rankClip">
+                        <div class="c-rankClip__cnt">
+                            <div class="l-badges l-badges--permute">
+                                <div class="l-badges__txt l-badges__txt--md">排行前</div>
+                                <div class="l-badges__item u-gapT-min-m">
+                                    <div class="o-badge o-badge--outline o-badge--record">100</div>
+                                    <span class="o-title o-title--md o-title--wh o-title--normal">名抽 switch</span>
                                 </div>
-                                <div class="l-stack__cnt">
-                                    <p class="o-txt">8分 20 秒</p>
-                                </div>
+                                <!-- <div class="l-badges__txt l-badges__txt--md"></div> -->
                             </div>
                         </div>
-                        <div class="c-card__main">
-                            <div class="l-stack">
-                                <div class="l-stack__top">
-                                    <p class="o-title o-title--sm o-title--gy">留言</p>
+                        <div class="c-rankClip__action">
+                            <a href="#" class="o-btn o-btn--outline">
+                                <span class="o-btn__txt">立即前往登錄</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="l-rankClip__item">
+                    <div class="c-rankClip c-rankClip--lyme">
+                        <div class="c-rankClip__cnt">
+                            <div class="l-badges l-badges--permute">
+                                <div class="l-badges__txt l-badges__txt--md">目前已有</div>
+                                <div class="l-badges__item u-gapT-min-m">
+                                    <div class="o-badge o-badge--outline o-badge--record">299</div>
+                                    <span class="o-title o-title--md o-title--dkgn o-title--normal">名參賽者！</span>
                                 </div>
-                                <div class="l-stack__cnt">
-                                    <p class="o-txt">練習 BMI Kata 最後都把 bmi 的公式以及數值背起來了，整個肌肉記憶知道下一步要做什麼 XD</p>
-                                </div>
+                                <!-- <div class="l-badges__txt l-badges__txt--md">名參賽者！</div> -->
                             </div>
                         </div>
-                        <div class="c-card__bottom c-card__bottom--apart">
-                            <div class="l-badges">
-                                <div class="l-badges__item">
-                                    <div class="o-badge o-badge--outline">Code</div>
-                                </div>
-                                <div class="l-badges__item">
-                                    <div class="o-badge o-badge--outline">Video</div>
-                                </div>
-                            </div>
-                            <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
+                        <div class="c-rankClip__action">
+                            <a href="#" class="o-btn o-btn--dkgn o-btn--outline">
+                                <span class="o-btn__txt">查詢你的排行</span>
+                            </a>
                         </div>
                     </div>
                 </li>
             </ul>
-            <div class="l-heading l-heading--tie">
-                <div class="l-heading__cnt">
-                    <!-- <p class="o-txt o-txt--gy">No.11 ~ No.20</p> -->
-                </div>
-            </div>
-            <!-- 第四名之後的卡片 -->
-            <ul id='personOther' class="l-card">
-                <li class="l-card__item">
-                    <div class="c-card">
-                        <div class="c-card__info">
-                            <div class="l-stack l-stack--apart">
-                                <div class="l-stack__top">
-                                    <div class="o-badge">No. 11</div>
-                                    <p class="o-title o-title--long u-paraL-sm">咖咖</p>
-                                    <p class="o-txt">8分 20 秒</p>
+        </section>
+        <!-- 計算你的 BMI -->
+        <section class="l-wrap l-wrap--gy">
+            <div class="l-wrap__cnt">
+                <div class="c-card">
+                    <div class="c-card__tags">
+                        <div class="l-badges l-badges--center">
+                            <div class="l-badges__item">
+                                <div class="o-badge o-badge--lg o-badge--gn">計算你的 BMI</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card__cnt">
+                        <div class="l-form l-form--permute">
+                            <div class="l-form__cnt">
+                                <div class="c-input">
+                                    <div class="c-input__cnt">
+                                        <div class="o-inpbox">
+                                            <label for="" class="o-inpbox__lbl">請輸入您的身高</label>
+                                            <input type="number" id="" class="o-inpbox__inp" placeholder="身高" />
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="l-stack__cnt">
-                                    <ul class="l-badges">
-                                        <li class="l-badges__item">
-                                            <div class="o-badge o-badge--outline">Code</div>
-                                        </li>
-                                        <li class="l-badges__item">
-                                            <div class="o-badge o-badge--outline">Video</div>
-                                        </li>
-                                        <li class="l-badges__item">
-                                            <div class="o-badge o-badge--gn">TEAM 1</div>
-                                        </li>
-                                        <li class="l-badges__item">
-                                            <a href="#" data-target="咖咖">
-                                                <i class="o-icon o-icon--lg o-icon--more"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                <div class="c-input">
+                                    <div class="c-input__cnt">
+                                        <div class="o-inpbox">
+                                            <label for="" class="o-inpbox__lbl">請輸入您的體重</label>
+                                            <input type="number" id="" class="o-inpbox__inp" placeholder="體重" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-form__action">
+                                <div class="l-actions">
+                                    <div class="l-actions__item">
+                                        <a href="#" class="o-btn o-btn--dkgn">
+                                            <span class="o-btn__txt">開始計算</span>
+                                        </a>
+                                    </div>
+                                    <div class="l-actions__item">
+                                        <a href="#" class="o-btn o-btn--wh">
+                                            <span class="o-btn__txt">清除全部</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="c-card__panel" data-panel="咖咖">
-                            <div class="c-card__main c-card__main--noUnderline">
+                        <div class="l-countInfo">
+                            <div class="c-countInfo">
+                                <div>不要害怕面對現實</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card__bottom c-card__bottom--r">
+                        <div class="l-actions l-actions--check">
+                            <div class="l-actions__txt">
+                                <div class="o-txt o-txt--sm o-txt--gy">想了解背後如何運作？</div>
+                            </div>
+                            <div class="l-actions__item">
+                                <a href="#" class="o-btn o-btn--wh">
+                                    <span class="o-btn__txt">查看程式碼</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 最踴躍組別 / 最神速組別 -->
+        <section class="l-container l-container--gy">
+            <div class="l-billboard">
+                <div class="l-billboard__item l-billboard__item--lyme">
+                    <div class="l-heading l-heading--center">
+                        <div class="l-heading__cnt">
+                            <h2 class="o-title o-title--lg o-title--dkgn">最踴躍組別</h2>
+                        </div>
+                    </div>
+                    <ul id="l-billboardList-amount" class="l-billboardList">
+                        <li class="l-billboardList__item">
+                            <div class="c-card c-card--medal c-card--fri">
+                                <div class="c-card__tit">
+                                    <p class="o-title">第五組</p>
+                                    <div class="l-stackWrap">
+                                        <div class="l-stackWrap__item">
+                                            <div class="l-stack">
+                                                <div class="l-stack__top">
+                                                    <p class="o-title o-title--sm o-title--normal o-title--gy">繳交人數</p>
+                                                </div>
+                                                <div class="l-stack__cnt">
+                                                    <p class="o-txt">8人</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="l-stackWrap__item">
+                                            <div class="l-stack">
+                                                <div class="l-stack__top">
+                                                    <p class="o-title o-title--sm o-title--normal o-title--gy">平均時間</p>
+                                                </div>
+                                                <div class="l-stack__cnt">
+                                                    <p class="o-txt">10分32秒</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-card__main">
+                                    <div class="l-stack">
+                                        <div class="l-stack__top">
+                                            <p class="o-title o-title--sm o-title--normal o-title--gy">組內排名</p>
+                                        </div>
+                                        <div class="l-stack__cnt">
+                                            <ul class="l-memberList">
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Lina Chen</div>
+                                                        <div class="c-memberClip__timer">8分20秒</div>
+                                                    </div>
+                                                </li>
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Yu Chien</div>
+                                                        <div class="c-memberClip__timer">9分20秒</div>
+                                                    </div>
+                                                </li>
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Jordan Tseng</div>
+                                                        <div class="c-memberClip__timer">9分36秒</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-card__bottom c-card__bottom--r">
+                                    <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-billboardList__item">
+                            <div class="c-card c-card--medal c-card--sec">
+                                <div class="c-card__tit">
+                                    <p class="o-title">第五組</p>
+                                    <div class="l-stackWrap">
+                                        <div class="l-stackWrap__item">
+                                            <div class="l-stack">
+                                                <div class="l-stack__top">
+                                                    <p class="o-title o-title--sm o-title--normal o-title--gy">繳交人數</p>
+                                                </div>
+                                                <div class="l-stack__cnt">
+                                                    <p class="o-txt">8人</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="l-stackWrap__item">
+                                            <div class="l-stack">
+                                                <div class="l-stack__top">
+                                                    <p class="o-title o-title--sm o-title--normal o-title--gy">平均時間</p>
+                                                </div>
+                                                <div class="l-stack__cnt">
+                                                    <p class="o-txt">10分32秒</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-card__main">
+                                    <div class="l-stack">
+                                        <div class="l-stack__top">
+                                            <p class="o-title o-title--sm o-title--normal o-title--gy">組內排名</p>
+                                        </div>
+                                        <div class="l-stack__cnt">
+                                            <ul class="l-memberList">
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Lina Chen</div>
+                                                        <div class="c-memberClip__timer">8分20秒</div>
+                                                    </div>
+                                                </li>
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Yu Chien</div>
+                                                        <div class="c-memberClip__timer">9分20秒</div>
+                                                    </div>
+                                                </li>
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Jordan Tseng</div>
+                                                        <div class="c-memberClip__timer">9分36秒</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-card__bottom c-card__bottom--r">
+                                    <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-billboardList__item">
+                            <div class="c-card c-card--medal c-card--thr">
+                                <div class="c-card__tit">
+                                    <p class="o-title">第五組</p>
+                                    <div class="l-stackWrap">
+                                        <div class="l-stackWrap__item">
+                                            <div class="l-stack">
+                                                <div class="l-stack__top">
+                                                    <p class="o-title o-title--sm o-title--normal o-title--gy">繳交人數</p>
+                                                </div>
+                                                <div class="l-stack__cnt">
+                                                    <p class="o-txt">8人</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="l-stackWrap__item">
+                                            <div class="l-stack">
+                                                <div class="l-stack__top">
+                                                    <p class="o-title o-title--sm o-title--normal o-title--gy">平均時間</p>
+                                                </div>
+                                                <div class="l-stack__cnt">
+                                                    <p class="o-txt">10分32秒</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-card__main">
+                                    <div class="l-stack">
+                                        <div class="l-stack__top">
+                                            <p class="o-title o-title--sm o-title--normal o-title--gy">組內排名</p>
+                                        </div>
+                                        <div class="l-stack__cnt">
+                                            <ul class="l-memberList">
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Lina Chen</div>
+                                                        <div class="c-memberClip__timer">8分20秒</div>
+                                                    </div>
+                                                </li>
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Yu Chien</div>
+                                                        <div class="c-memberClip__timer">9分20秒</div>
+                                                    </div>
+                                                </li>
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Jordan Tseng</div>
+                                                        <div class="c-memberClip__timer">9分36秒</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-card__bottom c-card__bottom--r">
+                                    <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="l-billboard__item l-billboard__item--gn">
+                    <div class="l-heading l-heading--center">
+                        <div class="l-heading__cnt">
+                            <h2 class="o-title o-title--lg o-title--dkgy">最神速組別</h2>
+                        </div>
+                    </div>
+                    <ul id="l-billboardList-speed" class="l-billboardList">
+                        <li class="l-billboardList__item">
+                            <div class="c-card c-card--medal c-card--fri">
+                                <div class="c-card__tit">
+                                    <p class="o-title">第五組</p>
+                                    <div class="l-stackWrap">
+                                        <div class="l-stackWrap__item">
+                                            <div class="l-stack">
+                                                <div class="l-stack__top">
+                                                    <p class="o-title o-title--sm o-title--normal o-title--gy">繳交人數</p>
+                                                </div>
+                                                <div class="l-stack__cnt">
+                                                    <p class="o-txt">8人</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="l-stackWrap__item">
+                                            <div class="l-stack">
+                                                <div class="l-stack__top">
+                                                    <p class="o-title o-title--sm o-title--normal o-title--gy">平均時間</p>
+                                                </div>
+                                                <div class="l-stack__cnt">
+                                                    <p class="o-txt">10分32秒</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-card__main">
+                                    <div class="l-stack">
+                                        <div class="l-stack__top">
+                                            <p class="o-title o-title--sm o-title--normal o-title--gy">組內排名</p>
+                                        </div>
+                                        <div class="l-stack__cnt">
+                                            <ul class="l-memberList">
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Lina Chen</div>
+                                                        <div class="c-memberClip__timer">8分20秒</div>
+                                                    </div>
+                                                </li>
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Yu Chien</div>
+                                                        <div class="c-memberClip__timer">9分20秒</div>
+                                                    </div>
+                                                </li>
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Jordan Tseng</div>
+                                                        <div class="c-memberClip__timer">9分36秒</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-card__bottom c-card__bottom--r">
+                                    <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-billboardList__item">
+                            <div class="c-card c-card--medal c-card--sec">
+                                <div class="c-card__tit">
+                                    <p class="o-title">第五組</p>
+                                    <div class="l-stackWrap">
+                                        <div class="l-stackWrap__item">
+                                            <div class="l-stack">
+                                                <div class="l-stack__top">
+                                                    <p class="o-title o-title--sm o-title--normal o-title--gy">繳交人數</p>
+                                                </div>
+                                                <div class="l-stack__cnt">
+                                                    <p class="o-txt">8人</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="l-stackWrap__item">
+                                            <div class="l-stack">
+                                                <div class="l-stack__top">
+                                                    <p class="o-title o-title--sm o-title--normal o-title--gy">平均時間</p>
+                                                </div>
+                                                <div class="l-stack__cnt">
+                                                    <p class="o-txt">10分32秒</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-card__main">
+                                    <div class="l-stack">
+                                        <div class="l-stack__top">
+                                            <p class="o-title o-title--sm o-title--normal o-title--gy">組內排名</p>
+                                        </div>
+                                        <div class="l-stack__cnt">
+                                            <ul class="l-memberList">
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Lina Chen</div>
+                                                        <div class="c-memberClip__timer">8分20秒</div>
+                                                    </div>
+                                                </li>
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Yu Chien</div>
+                                                        <div class="c-memberClip__timer">9分20秒</div>
+                                                    </div>
+                                                </li>
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Jordan Tseng</div>
+                                                        <div class="c-memberClip__timer">9分36秒</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-card__bottom c-card__bottom--r">
+                                    <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-billboardList__item">
+                            <div class="c-card c-card--medal c-card--thr">
+                                <div class="c-card__tit">
+                                    <p class="o-title">第五組</p>
+                                    <div class="l-stackWrap">
+                                        <div class="l-stackWrap__item">
+                                            <div class="l-stack">
+                                                <div class="l-stack__top">
+                                                    <p class="o-title o-title--sm o-title--normal o-title--gy">繳交人數</p>
+                                                </div>
+                                                <div class="l-stack__cnt">
+                                                    <p class="o-txt">8人</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="l-stackWrap__item">
+                                            <div class="l-stack">
+                                                <div class="l-stack__top">
+                                                    <p class="o-title o-title--sm o-title--normal o-title--gy">平均時間</p>
+                                                </div>
+                                                <div class="l-stack__cnt">
+                                                    <p class="o-txt">10分32秒</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-card__main">
+                                    <div class="l-stack">
+                                        <div class="l-stack__top">
+                                            <p class="o-title o-title--sm o-title--normal o-title--gy">組內排名</p>
+                                        </div>
+                                        <div class="l-stack__cnt">
+                                            <ul class="l-memberList">
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Lina Chen</div>
+                                                        <div class="c-memberClip__timer">8分20秒</div>
+                                                    </div>
+                                                </li>
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Yu Chien</div>
+                                                        <div class="c-memberClip__timer">9分20秒</div>
+                                                    </div>
+                                                </li>
+                                                <li class="l-memberList__item">
+                                                    <div class="c-memberClip">
+                                                        <div class="c-memberClip__title">Jordan Tseng</div>
+                                                        <div class="c-memberClip__timer">9分36秒</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-card__bottom c-card__bottom--r">
+                                    <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- 個人排行 -->
+        <section class="l-wrap l-wrap--gy">
+            <div class="l-wrap__cnt">
+                <div class="l-heading l-heading--center">
+                    <div class="l-heading__cnt">
+                        <h2 class="o-title o-title--lg o-title--dkgy">個人排行</h2>
+                    </div>
+                </div>
+                <div class="c-card c-card--search">
+                    <div class="c-card__cnt">
+                        <div class="l-actions l-actions--check">
+                            <div class="l-actions__txt">
+                                <div class="o-txt o-txt--sm o-txt--gy">篩選條件：</div>
+                            </div>
+                            <div class="l-actions__item">
+                                <a href="#" class="o-btn o-btn--md o-btn--wh">
+                                    <span class="o-btn__txt">低於10分鐘</span>
+                                </a>
+                            </div>
+                            <div class="l-actions__item">
+                                <a href="#" class="o-btn o-btn--md o-btn--wh">
+                                    <span class="o-btn__txt">有留言</span>
+                                </a>
+                            </div>
+                            <div class="l-actions__item">
+                                <a href="#" class="o-btn o-btn--md o-btn--wh">
+                                    <span class="o-btn__txt">有影片</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="l-form">
+                            <div class="l-form__cnt u-hidden-m">
+                                <div class="c-input">
+                                    <div class="c-input__cnt">
+                                        <div class="o-inpbox o-inpbox--ico">
+                                            <div class="o-inpbox__ico">
+                                                <i class="o-icon o-icon--magnifier"></i>
+                                            </div>
+                                            <input type="text" id="" class="o-inpbox__inp o-inpbox__inp--gy" placeholder="搜尋參賽者" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="l-form__action">
+                                <a href="#" class="o-btn o-btn--dkgn">
+                                    <span class="o-btn__txt">搜尋</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-heading l-heading--tie u-gapT-md">
+                    <div class="l-heading__cnt">
+                        <p class="o-txt o-txt--gy">No.1 ~ No.10</p>
+                    </div>
+                </div>
+                <!-- 前三名卡片 -->
+                <ul id="personTop3" class="l-card">
+                    <li class="l-card__item">
+                        <div class="c-card">
+                            <div class="c-card__tags">
+                                <ul class="l-badges">
+                                    <li class="l-badges__item">
+                                        <div class="o-badge o-badge--og">No. 1</div>
+                                    </li>
+                                    <li class="l-badges__item">
+                                        <div class="o-badge o-badge--gn">TEAM 1</div>
+                                    </li>
+                                    <li class="l-badges__item">
+                                        <div class="o-badge">Under 10 mins</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="c-card__tit">
+                                <div class="l-stack">
+                                    <div class="l-stack__top">
+                                        <p class="o-title">咖咖</p>
+                                    </div>
+                                    <div class="l-stack__cnt">
+                                        <p class="o-txt">8分 20 秒</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-card__main">
                                 <div class="l-stack">
                                     <div class="l-stack__top">
                                         <p class="o-title o-title--sm o-title--gy">留言</p>
@@ -708,20 +646,82 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="c-card__bottom c-card__bottom--r">
-                                <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
+                            <div class="c-card__bottom c-card__bottom--apart">
+                                <div class="l-badges">
+                                    <div class="l-badges__item">
+                                        <div class="o-badge o-badge--outline">Code</div>
+                                    </div>
+                                    <div class="l-badges__item">
+                                        <div class="o-badge o-badge--outline">Video</div>
+                                    </div>
+                                </div>
+                                <div class="l-txt">
+                                    <span class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</span>
+                                </div>
                             </div>
                         </div>
+                    </li>
+                </ul>
+                <div class="l-heading l-heading--tie">
+                    <div class="l-heading__cnt">
+                        <!-- <p class="o-txt o-txt--gy">No.11 ~ No.20</p> -->
                     </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- footer -->
-    <footer class="l-footer">
-        <p class="o-txt o-txt--sm o-txt--gy">© JordanttcDesign All Rights Reserved.</p>
-    </footer>
-</body>
-<script src="./js/main.js"></script>
-
+                </div>
+                <!-- 第四名之後的卡片 -->
+                <ul id="personOther" class="l-card">
+                    <li class="l-card__item">
+                        <div class="c-card">
+                            <div class="c-card__info">
+                                <div class="l-stack l-stack--apart">
+                                    <div class="l-stack__top">
+                                        <div class="o-badge">No. 11</div>
+                                        <p class="o-title o-title--long u-paraL-sm">咖咖</p>
+                                        <p class="o-txt">8分 20 秒</p>
+                                    </div>
+                                    <div class="l-stack__cnt">
+                                        <ul class="l-badges">
+                                            <li class="l-badges__item">
+                                                <div class="o-badge o-badge--outline">Code</div>
+                                            </li>
+                                            <li class="l-badges__item">
+                                                <div class="o-badge o-badge--outline">Video</div>
+                                            </li>
+                                            <li class="l-badges__item">
+                                                <div class="o-badge o-badge--gn">TEAM 1</div>
+                                            </li>
+                                            <li class="l-badges__item">
+                                                <a href="#" data-target="咖咖">
+                                                    <i class="o-icon o-icon--lg o-icon--more"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-card__panel" data-panel="咖咖">
+                                <div class="c-card__main c-card__main--noUnderline">
+                                    <div class="l-stack">
+                                        <div class="l-stack__top">
+                                            <p class="o-title o-title--sm o-title--gy">留言</p>
+                                        </div>
+                                        <div class="l-stack__cnt">
+                                            <p class="o-txt">練習 BMI Kata 最後都把 bmi 的公式以及數值背起來了，整個肌肉記憶知道下一步要做什麼 XD</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-card__bottom c-card__bottom--r">
+                                    <div class="o-txt o-txt--sm o-txt--gy">2021/3/13 下午 8:38:53</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer class="l-footer">
+            <p class="o-txt o-txt--sm o-txt--gy">© JordanttcDesign All Rights Reserved.</p>
+        </footer>
+    </body>
+    <script src="./js/main.js"></script>
 </html>

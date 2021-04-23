@@ -1,5 +1,5 @@
 .u-hidden {
-    @include breakpoint-pad {
+    @include breakpoint-laptop {
         &-m {
             display: none;
         }
@@ -7,7 +7,7 @@
 }
 
 .u-show {
-    @include breakpoint-pad {
+    @include breakpoint-laptop {
         &-m {
             display: block;
         }

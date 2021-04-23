@@ -14,7 +14,7 @@
         background-color: #f2f2f2;
     }
 
-    @include breakpoint-pad {
+    @include breakpoint-laptop {
         max-width: 768px;
     }
 }
@@ -27,7 +27,7 @@
         background-color: #f2f2f2;
     }
 
-    @include breakpoint-pad {
+    @include breakpoint-laptop {
         max-width: 768px;
     }
 }
@@ -44,11 +44,13 @@
         align-items: center;
     }
 
-    &__tit {}
+    &__tit {
+    }
 
-    &__btn {}
+    &__btn {
+    }
 
-    @include breakpoint-pad {
+    @include breakpoint-laptop {
         max-width: 768px;
 
         &__cnt {
@@ -68,11 +70,13 @@
     align-items: center;
     padding: 27px 97px 42px 50px;
 
-    &__tit {}
+    &__tit {
+    }
 
-    &__img {}
+    &__img {
+    }
 
-    @include breakpoint-pad {
+    @include breakpoint-laptop {
         padding: 97px 45px 132px;
         flex-direction: column;
         justify-content: flex-start;
@@ -81,6 +85,10 @@
         &__tit {
             margin-bottom: 36px;
         }
+    }
+
+    @include breakpoint-pad {
+        padding: 36px 26px 28px 26px;
     }
 }
 
@@ -91,7 +99,7 @@
     margin: auto;
     text-align: center;
 
-    @include breakpoint-pad {
+    @include breakpoint-laptop {
         max-width: 768px;
     }
 }

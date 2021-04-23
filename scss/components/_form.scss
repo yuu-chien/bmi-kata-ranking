@@ -41,20 +41,27 @@
         }
     }
 
-    @include breakpoint-pad {
-        width: 312px;
-
-        &__inp {}
+    @include breakpoint-laptop {
+        width: 100%;
     }
 }
 
 .c-input {
-
-    &+& {
+    & + & {
         margin-left: 12px;
     }
 
-    &__cnt {}
+    &__cnt {
+    }
+
+    @include breakpoint-pad {
+        width: 100%;
+
+        & + & {
+            margin-left: 0;
+            margin-top: 12px;
+        }
+    }
 }
 
 .l-form {
@@ -80,11 +87,15 @@
         }
     }
 
-    @include breakpoint-pad {
+    @include breakpoint-laptop {
         &--permute & {
             &__action {
                 margin-left: 0 !important;
             }
+        }
+
+        &__cnt {
+            flex-wrap: wrap;
         }
     }
 }

@@ -1,4 +1,21 @@
+@mixin breakpoint-laptop() {
+    @media only screen and (max-width: 1044px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-pad {
+    @media only screen and (max-width: 680px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-phone() {
+    @media only screen and (max-width: 376px) {
+        @content;
+    }
+}
+
 @import "./base/_reset";
-@import "./base/_breakpoints";
 @import "./base/_layout";
 @import "./components/components";

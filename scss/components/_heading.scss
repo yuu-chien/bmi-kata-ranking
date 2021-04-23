@@ -33,7 +33,7 @@
     }
 
     &--dkgn {
-        color: #387C57;
+        color: #387c57;
     }
 
     &--wh {
@@ -44,7 +44,7 @@
         width: 264px;
     }
 
-    @include breakpoint-pad {
+    @include breakpoint-laptop {
         &--md {
             font-size: 16px;
         }
@@ -95,6 +95,13 @@
         justify-content: space-between;
         align-items: center;
     }
+
+    @include breakpoint-pad {
+        &--apart {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
 }
 
 .l-stackWrap {
@@ -103,7 +110,7 @@
     margin-top: 16px;
 
     &__item {
-        &+& {
+        & + & {
             margin-left: 72px;
         }
     }

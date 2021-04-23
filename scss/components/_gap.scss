@@ -3,7 +3,7 @@
 }
 
 .u-gapT-min {
-    @include breakpoint-pad {
+    @include breakpoint-laptop {
         &-m {
             margin-top: 4px;
         }

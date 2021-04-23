@@ -17,11 +17,11 @@
         padding: 72px 48px 96px 60px;
 
         &--lyme {
-            background-color: #ADE653;
+            background-color: #ade653;
         }
 
         &--gn {
-            background-color: #35BF79;
+            background-color: #35bf79;
         }
 
         &:first-child {
@@ -35,16 +35,29 @@
         }
     }
 
-    @include breakpoint-pad {
+    @include breakpoint-laptop {
         &__item {
             padding: 48px 36px;
+        }
+    }
+    @include breakpoint-pad {
+        flex-direction: column;
+
+        &__item {
+            &:first-child {
+                margin-bottom: 0;
+            }
+
+            &:last-child {
+                margin-top: 0;
+            }
         }
     }
 }
 
 .l-billboardList {
     &__item {
-        &+& {
+        & + & {
             margin-top: 48px;
         }
     }

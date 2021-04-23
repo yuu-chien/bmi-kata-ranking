@@ -16,15 +16,16 @@
         display: inline-block;
     }
 
-    &__txt {}
+    &__txt {
+    }
 
     &--md {
         min-width: 88px;
     }
 
     &--lyme {
-        color: #387C57;
-        background-color: #01FF00;
+        color: #387c57;
+        background-color: #01ff00;
     }
 
     &--dkgn {
@@ -68,5 +69,22 @@
 
     &__txt {
         margin: 0 12px;
+    }
+
+    @include breakpoint-pad {
+        &__txt {
+            width: 100%;
+            margin: 0 12px 8px 12px;
+        }
+
+        &--check {
+            flex-direction: column;
+        }
+
+        &--check & {
+            &__item {
+                display: none;
+            }
+        }
     }
 }
